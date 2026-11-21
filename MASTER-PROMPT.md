@@ -66,3 +66,22 @@ Chỉ gọi `deepseek-chat` (`temperature=0.3`, `max_tokens=400`) trong đúng 4
 ## 6. CÁCH DẠY & HỌC SKILL (KHỞI ĐỘNG 1 LẦN)
 - `@Muse1cualinh_Bot` biên soạn file `SOP-SKILLS.md` (≤500 chữ từ dữ liệu thật & kho Skill) gồm: (1) Thông tin cố định của dự án/shop, (2) 5 quy tắc Skill cho `@Muse2xoainon_BOT`, (3) 5 lỗi nghiêm trọng `@Muse3cualinh_BOT` phải soi → `git push` và báo group.
 - `@Muse2xoainon_BOT` và `@Muse3cualinh_BOT` `git pull` đọc `SOP-SKILLS.md`, mỗi con xác nhận đúng 2 dòng lên group: vai trò của mình + 1 điều tuyệt đối cấm làm.
+
+---
+
+## 7. QUY TẮC BẢO MẬT TUYỆT ĐỐI & XÓA KHẨN CẤP (ƯU TIÊN CAO NHẤT)
+1. **DANH SÁCH CẤM TUYỆT ĐỐI KHÔNG GHI VÀO REPO (`TASKS.md`, `SOP-SKILLS.md`, `outputs/`, `TASKS_ARCHIVE.md`) HOẶC IN RA CHAT CHUNG:**
+   - **Khóa & thông tin đăng nhập:** API Key (`sk-...`), GitHub Token (`ghp_...`, `github_pat_...`), Bot Token Telegram, mật khẩu, cookie, mã OTP, thông tin thẻ ngân hàng / PayPal / tài khoản thanh toán.
+   - **Thông tin cá nhân chủ sở hữu:** Họ tên đầy đủ riêng tư, số điện thoại, địa chỉ nhà, CCCD/giấy tờ, email riêng tư, thông tin tài chính nội bộ nhạy cảm.
+   - **Thông tin khách hàng:** Họ tên thật, số điện thoại, email, địa chỉ giao hàng, mã đơn gắn kèm thông tin cá nhân, tin nhắn riêng tư của khách.
+2. **BẮT BUỘC ẨN DANH (MASKING):** Khi cần nhắc tới khách hàng hoặc đơn hàng, chỉ ghi dạng ẩn danh: `[KHÁCH_A]`, `[ĐƠN_#XXX]`, `[ĐÃ_ẨN_THÔNG_TIN]`.
+3. **RÀ SOÁT TRƯỚC KHI `git push`:** Cả 3 bot bắt buộc tự kiểm tra nội dung trước khi `git push`. `@Muse3cualinh_BOT` có quyền chặn khẩn cấp bất kỳ bài làm nào chứa dữ liệu nhạy cảm.
+4. **QUY TRÌNH XÓA KHẨN CẤP NẾU LỠ GHI LỘ:**
+   - **Chưa `git push`:** Xóa ngay lập tức khỏi file trên máy ảo (hoặc `git reset` commit nhầm) trước khi push.
+   - **Đã lỡ `git push` lên GitHub:**
+     1) Xóa sạch thông tin nhạy cảm khỏi file hiện tại, thay bằng `[ĐÃ XÓA KHẨN CẤP VÌ BẢO MẬT]`, commit và `git push` ngay.
+     2) **KHÔNG in lại nội dung bị lộ lên chat.**
+     3) Gửi ngay cảnh báo ĐỎ lên group cho chủ nhóm:
+        `🚨 [CẢNH BÁO BẢO MẬT KHẨN] Đã phát hiện thông tin nhạy cảm tại <tên file> (loại: <key/SĐT/khách hàng>). Đã xóa ở bản mới nhất — CHỦ NHÓM CẦN THU HỒI/ĐỔI KEY NGAY VÀ XÓA LỊCH SỬ GIT NẾU CẦN!`
+     4) Tạm dừng task đó cho đến khi chủ nhóm xác nhận đã xử lý xong.
+
