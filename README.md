@@ -1,5 +1,8 @@
 # Muse Team Workspace — Không Gian Làm Việc Chung (3 Bot Muse + DeepSeek API)
 
+- **GitHub Repo chung:** https://github.com/maitranlinh67-beep/muse-team-workspace
+- **Thư mục cục bộ trên Mac:** `/Users/tranlinhtuoi20/Desktop/Quản lí thông tin của Linh/Muse_Team_Workspace`
+
 Thư mục này là **văn phòng dùng chung** cho 3 bot phối hợp với nhau theo cơ chế **Bảng việc chung (`TASKS.md`)**:
 
 | Bot | Username Telegram | Vai trò | Prompt chuẩn |

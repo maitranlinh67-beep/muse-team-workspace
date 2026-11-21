@@ -2,8 +2,10 @@
 
 HƯỚNG DẪN DÙNG CHUNG THƯ MỤC & CÁCH LÀM VIỆC CỦA ĐỘI 3 BOT
 
-1. THƯ MỤC LÀM VIỆC CHUNG CỦA CẢ 3 CON:
-`/Users/tranlinhtuoi20/Desktop/Quản lí thông tin của Linh/Muse_Team_Workspace`
+1. THƯ MỤC & REPO LÀM VIỆC CHUNG CỦA CẢ 3 CON:
+- GitHub Repo chung: https://github.com/maitranlinh67-beep/muse-team-workspace
+- Thư mục trên Mac: `/Users/tranlinhtuoi20/Desktop/Quản lí thông tin của Linh/Muse_Team_Workspace`
+*(Mỗi lần trước khi nhận việc/duyệt bài, nhớ `git pull` để lấy trạng thái mới nhất; sau khi cập nhật `TASKS.md` hoặc `outputs/`, nhớ `git add`, `git commit`, `git push` ngay để 2 bot còn lại thấy).*
 
 Ý nghĩa từng file trong thư mục này:
 - `TASKS.md`: Bảng việc chung. Mọi giao việc, nhận việc, duyệt bài và chốt cuối đều ghi ở đây.
